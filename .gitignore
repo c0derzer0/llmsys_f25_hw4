@@ -1,0 +1,7 @@
+.hypothesis
+__pycache__
+*.pyc
+.pytest_cache/
+minitorch.egg-info/
+.DS_Store
+*.log
