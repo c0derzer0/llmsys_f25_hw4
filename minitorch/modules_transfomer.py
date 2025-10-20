@@ -144,6 +144,7 @@ class MultiHeadAttention(Module):
         result = self.self_attention(q, kT, v)
         result = self.out_projection(result.view(batch_size * seq_len, n_embd))
         result = self.dropout(result).view(batch_size, seq_len, n_embd)
+        return result
 
 
 class FeedForward(Module):

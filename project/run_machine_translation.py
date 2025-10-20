@@ -148,9 +148,9 @@ def collate_batch(
 
 
     return {
-        'input_ids': minitorch.zeros((len(examples), model_max_length)),
-        'labels': minitorch.zeros((len(examples), model_max_length)),
-        'label_token_weights': minitorch.zeros((len(examples), model_max_length))
+        'input_ids': input_ids,
+        'labels': labels,
+        'label_token_weights': label_token_weights
     }
 
 

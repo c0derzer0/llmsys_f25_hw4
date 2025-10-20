@@ -51,7 +51,7 @@ class Embedding(Module):
         
         # COPY FROM ASSIGN2_3
         output = one_hot(x, self.num_embeddings)
-        output = output.view(bs* seq_len, self.num_embeddings)        
+        output = output.view(bs* seq_len, self.num_embeddings)    
         output = output @ self.weights.value
         output = output.view(bs, seq_len, self.embedding_dim)
         return output
